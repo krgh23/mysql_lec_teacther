@@ -21,10 +21,10 @@ CREATE TABLE IF NOT EXISTS tbl_product
 
 CREATE TABLE IF NOT EXISTS tbl_order
 (
-    order_id INT NOT NULL AUTO_INCREMENT COMMENT '주문번호',
+    order_id   INT NOT NULL AUTO_INCREMENT COMMENT '주문번호',
     order_user VARCHAR(20) COMMENT '주문자',
-    prod_id INT COMMENT '제품번호',
-    order_dt DATETIME DEFAULT NOW() COMMENT '주문일자',
+    prod_id    INT COMMENT '제품번호',
+    order_dt   DATETIME DEFAULT NOW() COMMENT '주문일자',
     PRIMARY KEY(order_id),
     FOREIGN KEY(prod_id) REFERENCES tbl_product(prod_id)
 ) ENGINE=INNODB COMMENT '주문';
