@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS tbl_employee
 (
     emp_id      INT NOT NULL AUTO_INCREMENT COMMENT '사원아이디',
     dept_id     INT COMMENT '부서아이디',
-    position    CHAR(10) COMMENT '직급',
     emp_name    VARCHAR(15) COMMENT '사원명',
+    position    CHAR(10) COMMENT '직급',
     gender      CHAR(1) COMMENT '성별',
     hire_date   DATE COMMENT '입사일자',
     salary      INT COMMENT '연봉',
