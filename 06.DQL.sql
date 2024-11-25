@@ -151,3 +151,16 @@ SELECT emp_id, dept_id, emp_name, position, gender, hire_date, salary
 
 
 /* LIMIT ~ */
+-- 일반적 패턴 : 원하는 기준으로 정렬한 뒤 일부만 조회
+
+-- 22. 가장 먼저 입사한 사원 조회하기
+SELECT emp_id, dept_id, emp_name, position, gender, hire_date, salary
+  FROM tbl_employee
+ ORDER BY hire_date
+ LIMIT 0, 1;  -- 첫 번째 행(0)부터 1개 행 조회. LIMIT 1;
+
+-- 23. 급여가 2 ~ 3번째로 높은 사원 조회하기.
+SELECT emp_id, dept_id, emp_name, position, gender, hire_date, salary
+  FROM tbl_employee
+ ORDER BY salary DESC
+ LIMIT 1, 2;  -- 2행(1)부터 2개 행 조회
